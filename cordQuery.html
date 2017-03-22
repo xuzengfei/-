@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>玲珑艺术培训中心</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/iconStyle.css">
+    <link rel="stylesheet" href="css/icon.css">
+    <link rel="stylesheet" href="css/iconStyle_other.css">
+    <link rel="stylesheet" href="css/icon_other.css">
+    <link rel="stylesheet" href="css/weui.min.css">
+    <link rel="stylesheet" href="css/jquery-weui.css">
+    <link rel="stylesheet" href="css/demos.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/classQuery.css">
+    <link rel="stylesheet" href="css/cordQuery.css">
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/jquery-weui.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body ontouchstart>
+    <div class="container">
+        <div class="classTop">
+            <img class="img-circle" src="images/index_userImg.png">
+            <h3>第四次段位晋级考试</h3>
+            <h5>2016-12-28</h5>
+            <h4>考核状态</h4>
+            <h2>通过</h2>
+            <a class=" open-popup" data-target="#half">
+                <span class="icon-icon12"></span>
+            </a>
+        </div>
+        <div class="list-group" id="listLoad">
+            <div class="list-group-item">
+                <p class="itemTitle">第三次单位晋级考试</p>
+                <p class="date">2016-11-28</p>
+                <p class="detail">总体不错，力量有待加强</p>
+                <h2 class="cord">通过</h2>
+            </div>
+            <div class="list-group-item">
+                <p class="itemTitle">第二次单位晋级考试</p>
+                <p class="date">2016-10-28</p>
+                <p class="detail">总体不错，力量有待加强</p>
+                <h2 class="cord">未通过</h2>
+            </div>
+            <div class="list-group-item">
+                <p class="itemTitle">第二次单位晋级考试</p>
+                <p class="date">2016-10-28</p>
+                <p class="detail">总体不错，力量有待加强</p>
+                <h2 class="cord">未通过</h2>
+            </div>
+            <div class="list-group-item">
+                <p class="itemTitle">第二次单位晋级考试</p>
+                <p class="date">2016-10-28</p>
+                <p class="detail">总体不错，力量有待加强</p>
+                <h2 class="cord">未通过</h2>
+            </div>
+            <div class="list-group-item">
+                <p class="itemTitle">第二次单位晋级考试</p>
+                <p class="date">2016-10-28</p>
+                <p class="detail">总体不错，力量有待加强</p>
+                <h2 class="cord">未通过</h2>
+            </div>
+            <div class="list-group-item">
+                <p class="itemTitle">第三次单位晋级考试</p>
+                <p class="date">2016-11-28</p>
+                <p class="detail">总体不错，力量有待加强</p>
+                <h2 class="cord">通过</h2>
+            </div>
+        </div>
+        <div class="weui-infinite-scroll">
+            <div class="infinite-preloader"></div>
+            正在加载
+        </div>
+        <script>
+            var loading = false;
+            $(document.body).infinite().on("infinite", function() {
+                if(loading) return;
+                loading = true;
+                setTimeout(function() {
+                    $("#listLoad").append(
+                            "<div class='list-group-item'>"+
+                            "<p class='itemTitle'>第二次单位晋级考试</p>"+
+                            "<p class='date'>2016-10-28</p>"+
+                            "<p class='detail'>总体不错，力量有待加强</p>"+
+                            "<p class='cord'>未通</p></div>");
+                    loading = false;
+                }, 2000);
+            });
+        </script>
+        <div class="marginBottom"></div>
+    </div>
+    <div class="bottom">
+        <a href="index.html">
+            <div class="col-xs-4" id="index">
+                <span class="icon-icon1">
+                </span>
+                <p>首页</p>
+            </div>
+        </a>
+        <a href="fee_chooseClass.html">
+            <div class="col-xs-4" id="fee">
+                <span class="icon-icon2">
+                </span>
+                <p>缴费</p>
+            </div>
+        </a>
+        <a href="#" id="tel">
+            <div class="col-xs-4" id="phone">
+                <span class="icon-icon3">
+                </span>
+                <p>电话</p>
+            </div>
+        </a>
+    </div>
+    <form id="half" class='weui-popup-container popup-bottom'>
+        <div class="weui-popup-modal">
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                    <a href="javascript:;" class="picker-button close-popup" style="color: #1bb9e0;">关闭</a>
+                    <h1 class="title">搜索</h1>
+                </div>
+            </div>
+            <div class="modal-content">
+                <input type="date" class="dateInput" placeholder="请输入起始时间">&nbsp;——
+                <input type="date" class="dateInput" placeholder="请输入截止时间">
+                <br>
+                <div class="checkbox">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        通过状态
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="">
+                        未通过状态
+                    </label>
+                </div>
+                <button type="submit" class="btn" id="btn">确定</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

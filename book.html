@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>玲珑艺术培训中心</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/iconStyle.css">
+    <link rel="stylesheet" href="css/icon.css">
+    <link rel="stylesheet" href="css/iconStyle_other.css">
+    <link rel="stylesheet" href="css/icon_other.css">
+    <link rel="stylesheet" href="css/weui.min.css">
+    <link rel="stylesheet" href="css/jquery-weui.css">
+    <link rel="stylesheet" href="css/demos.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/book.css">
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/jquery-weui.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body ontouchstart>
+    <div class="container" id="listLoad">
+        <div class="list">
+            <div class="dateBox">
+                <img src="images/littlePoint.png">
+                <p class="date">1月12日</p>
+            </div>
+            <div class="listContent">
+                <p>昨天圣诞节表演小飞很出色哦！</p>
+                <img src="images/bookImg1.png">
+                <img src="images/bookImg2.png">
+                <img src="images/bookImg1.png">
+            </div>
+			<div class="listContent">
+                <p>第二条</p>
+                <img src="images/bookImg1.png">
+                <img src="images/bookImg2.png">
+                <img src="images/bookImg1.png">
+            </div>
+			<div class="listContent">
+                <p>第三条</p>
+                <img src="images/bookImg1.png">
+                <img src="images/bookImg2.png">
+                <img src="images/bookImg1.png">
+            </div>
+        </div>
+        <div class="list" >
+            <div class="dateBox">
+                <img src="images/littlePoint.png">
+                <p class="date">1月12日</p>
+            </div>
+            <div class="listContent">
+                <p>刻苦的训练，受到教练的表扬呢，继续加油</p>
+                <img src="images/bookImg3.png">
+            </div>
+        </div>
+        <div class="list">
+            <div class="dateBox">
+                <img src="images/littlePoint.png">
+                <p class="date">12月11日</p>
+            </div>
+            <div class="listContent">
+                <p>昨天圣诞节表演小飞很出色哦！</p>
+                <img src="images/bookImg1.png">
+            </div>
+        </div>
+        <div class="list">
+            <div class="dateBox">
+                <img src="images/littlePoint.png">
+                <p class="date">11月11日</p>
+            </div>
+            <div class="listContent">
+                <p>昨天圣诞节表演小飞很出色哦！</p>
+                <img src="images/bookImg1.png">
+                <img src="images/bookImg2.png">
+                <img src="images/bookImg3.png">
+            </div>
+        </div>
+        <div class="weui-infinite-scroll">
+            <div class="infinite-preloader"></div>
+            正在加载
+        </div>
+        <script>
+            var loading = false;
+            $(document.body).infinite().on("infinite", function() {
+                if(loading) return;
+                loading = true;
+                setTimeout(function() {
+                    $("#listLoad").append(
+                            "<div class='list'>" +
+                            "<div class='dateBox'>" +
+                            "<img src='images/littlePoint.png'>" +
+                            "<p class='date'>1月12日</p>" +
+                            "</div> <div class='listContent'>" +
+                            "<p>昨天圣诞节表演小飞很出色哦！</p>" +
+                            "<img src='images/bookImg1.png'>" +
+                            "<img src='images/bookImg2.png'>" +
+                            "<img src='images/bookImg1.png'>" +
+                            "</div>" +
+                            "</div>");
+                    loading = false;
+                }, 2000);
+            });
+        </script>
+        <!--//内容滚动区域底部留白-->
+        <div class="marginBottom"></div>
+    </div>
+    <div class="header">
+        <a href="index.html"><span class="icon-icon15"></span></a>
+        成长纪念册
+    </div>
+    <div class="bottom">
+        <a href="index.html">
+            <div class="col-xs-4" id="index">
+                <span class="icon-icon1">
+                </span>
+                <p>首页</p>
+            </div>
+        </a>
+        <a href="fee_chooseClass.html">
+            <div class="col-xs-4" id="fee">
+                <span class="icon-icon2">
+                </span>
+                <p>缴费</p>
+            </div>
+        </a>
+        <a href="#" id="tel">
+            <div class="col-xs-4" id="phone">
+                <span class="icon-icon3">
+                </span>
+                <p>电话</p>
+            </div>
+        </a>
+    </div>
+</body>
+</html>
